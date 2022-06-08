@@ -3,31 +3,49 @@
     <head>
         <title></title>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles.css" />
     </head>
     <body>
-        <header>Maintenance Calorie Calculator</header>
         <form>
+            <div class="form__title">
+                Maintenance Calorie Calculator    
+            </div>
+            <div class="form__label">Age:</div>
+            <div class="form__input-group">
+                <input type="number" id="form__age" min="18" max="99"></input>
+            </div>
             
-            <p>Age:</p>
-            <input type="number" id="form__age" min="18" max="99"></input>
         
-            <p>Sex:</p>
-            <input type="radio" id="form__sex-male" name="sex">
-            <label for="form__sex-male">Male</label>
-            <input type="radio" id="form__sex-female" name="sex">
-            <label for="form__sex-female">Female</label>
-        
-            <p>Height:</p>
-            <input type="number" min="3" max="8" id="form__height-feet"></input>
-            <p>ft</p>
-            <input type="number" id="form__height-inches" min="0" max="12"></input>
-            <p>in</p>
+            <div class="form__label">Sex:</div>
+            <div class="form__input-group">
+                <input type="radio" id="form__sex-male" name="sex">
+                <label for="form__sex-male">Male</label>
+                <input type="radio" id="form__sex-female" name="sex">
+                <label for="form__sex-female">Female</label>
+            </div>
+            
+            <div class="form__label">Height:</div>
+            
+            <div class="form__input-group form__input-group-height">
+                <input type="number" min="3" max="8" id="form__height-feet"></input>
+                <div class="form__input-group__units">ft</div>
+            </div>
 
-            <p>Weight:</p>
-<input type="number" id="form__weight" min="50" max="600"></input><br>
+            <div class="form__input-group form__input-group-height">
+                <input type="number" id="form__height-inches" min="0" max="12"></input>
+                <div class="form__input-group__units">in</div>
+            </div>
 
-            <input type="submit"></input>
+            
+
+            <div class="form__label">Weight:</div>
+            <div class="form__input-group">
+                <input type="number" id="form__weight" min="50" max="600"></input>
+            </div>
+
+
+            <input type="submit" class="form__submit"></input>
         </form>
         <script src="./script.js"></script>
     </body>
